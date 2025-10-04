@@ -3,10 +3,10 @@ import gato from '..//..//assets/gato.png';
 
 function Hero() {
     return (
-        <div className="flex items-center justify-between px-10 mt-10">
-            {/* Texto para esquerda */}
+        <div className="flex items-start justify-between px-32 py-10">
+            {/* Texto à esquerda */}
             <div>
-                <h2 className="text-5xl font-bold leading-tight">
+                <h2 className="text-5xl font-extrabold leading-tight">
                     PROMOVA PETS <br />PARA ADOÇÃO 🐾
                 </h2>
                 <p className="mt-4 text-gray-700 max-w-md">
