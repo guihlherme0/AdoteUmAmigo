@@ -1,44 +1,43 @@
-import cachorro from '..//..//assets/cachorro.png';
-import gato from '..//..//assets/gato.png';
+import cachorro from '../../assets/cachorro.png';
+import gato from '../../assets/gato.png';
 
 function Hero() {
-    return (
-        <div className="flex items-start justify-between px-32 py-10">
-            {/* Texto à esquerda */}
-            <div>
-                <h2 className="text-5xl font-extrabold leading-tight">
-                    PROMOVA PETS <br />PARA ADOÇÃO 🐾
-                </h2>
-                <p className="mt-4 text-gray-700 max-w-md">
-                    Utilize ferramentas de divulgação de pets com eficácia comprovada em todo o Brasil.
-                    Crie seu anúncio gratuito agora mesmo para ter acesso ao Painel de Adoção.
-                </p>
-
-                <div className="mt-6 flex gap-4">
-                    <button className="bg-purple-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-700 cursor-pointer hover:scale-105 transition-all">
-                        Divulgar Pet
-                    </button>
-                    <button className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg shadow-md hover:bg-purple-100 cursor-pointer hover:scale-105 transition-all">
-                        Adotar um Pet
-                    </button>
-                </div>
-            </div>
-
-            {/* Imagens à direita */}
-            <div className="flex">
-                <img
-                    src={cachorro}
-                    alt="Cachorro"
-                    className="h-64 object-contain"
-                />
-                <img
-                    src={gato}
-                    alt="Gato"
-                    className="h-64 object-contain -ml-8"
-                />
-            </div>
+  return (
+    <div className="flex flex-col-reverse md:flex-row items-center px-6 md:px-32 py-12 md:py-24">
+      
+      {/* Texto */}
+      <div className="text-center md:text-left md:max-w-md">
+        <h1 className="text-4xl md:text-5xl font-extrabold leading-tight">
+          Adote, <br /> não compre! 🐾
+        </h1>
+        <p className="mt-4 text-gray-700">
+          Encontre seu novo melhor amigo <br /> e dê um lar cheio de amor.
+        </p>
+        <div className="mt-6 flex justify-center md:justify-start gap-4">
+          <button className="bg-purple-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-purple-700 cursor-pointer hover:scale-105 transition-all duration-300">
+            Divulgar Pet
+          </button>
+          <button className="border-2 border-purple-600 text-purple-600 px-6 py-3 rounded-lg shadow-md hover:bg-purple-50 cursor-pointer hover:scale-105 transition-all duration-300">
+            Adotar um Pet
+          </button>
         </div>
-    );
+      </div>
+
+      {/* Imagens */}
+      <div className="flex relative justify-center mb-8 md:mb-0">
+        <img
+          src={cachorro}
+          alt="Cachorro"
+          className="h-48 md:h-80 object-contain"
+        />
+        <img
+          src={gato}
+          alt="Gato"
+          className="h-48 md:h-80 object-contain -ml-12 md:-ml-24"
+        />
+      </div>
+    </div>
+  );
 }
 
 export default Hero;

@@ -6,7 +6,9 @@ import Hero from "./Components/Hero/Hero"
 function App() {
   return (
     <div>
-      {/* Navbar*/}
+      {/* Navbardisney
+
+      */}
       <Navbar />
       {/* Hero Section */}
       <Hero />
