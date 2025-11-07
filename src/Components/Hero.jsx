@@ -18,7 +18,7 @@ function Hero() {
           <Circle className="text-purple-500 w-5 h-5" />
           <Circle className="text-purple-500 w-5 h-5" />
         </div>
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-start">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* card 1 */}
           <div className="bg-white w-72 rounded-4xl p-6 border border-gray-100 shadow-2xl lg:shadow-2xl transition">
             <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-blue-100 mb-4">
@@ -40,7 +40,6 @@ function Hero() {
             <h4 className="text-purple-700 font-semibold text-md mb-2">Pets Adotados</h4>
 
             <div className="flex items-center mb-2">
-              {/* Ícone de cachorro/gato */}
               <span className="mr-2">
                 <Heart className="text-purple-600 w-8 h-8" />
               </span>
@@ -56,11 +55,13 @@ function Hero() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-6">
-          <button className="bg-purple-600 text-white font-semibold px-4 py-4 sm:px-6 sm:py-4 rounded-xl shadow-xl hover:bg-purple-700 transition-all duration-300">
+        <div className="mt-12 flex flex-col sm:flex-row justify-center lg:justify-start gap-4 mb-6">
+          <button className="bg-purple-600 text-white font-semibold text-sm px-8 py-4 w-fit mx-auto sm:w-auto sm:mx-0      
+          sm:text-base sm:px-8 sm:py-4 rounded-xl shadow-xl hover:bg-purple-700 transition-all duration-300 cursor-pointer">
             Divulgar pet
           </button>
-          <button className="bg-white text-purple-700 font-semibold px-4 py-4 sm:px-4 sm:py-4 rounded-xl border-2 border-purple-600 hover:bg-purple-100 transition-all duration-300">
+          <button className="bg-white text-purple-700 font-semibold text-sm px-6 py-4 w-fit mx-auto sm:w-auto sm:mx-0 sm:text-base sm:px-6 sm:py-4
+          rounded-xl border-2 border-purple-600 shadow-sm hover:bg-purple-100 transition-all duration-300 cursor-pointer">
             Adotar um Pet
           </button>
 
@@ -75,7 +76,7 @@ function Hero() {
       </div>
 
     </section>
-  )
-}
+  );
+};
 
 export default Hero;

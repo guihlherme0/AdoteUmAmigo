@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, PawPrintIcon, X } from "lucide-react"; // ícones (instale com: npm i lucide-react)
+import { Menu, PawPrintIcon, X } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "#Home" },
@@ -14,7 +14,7 @@ export default function Navbar() {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="fixed w-full bg-gray-50 top-0 left-0 right-0 z-50">
+    <nav className="fixed w-full top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200/50">
       <div className="max-w-7x1 mx-auto px-4 sm:px-6 md:px-12 lg:px-20 py-3 md:py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center text-x1 sm:text-2xl
