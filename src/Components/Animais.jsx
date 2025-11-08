@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import pets from "../Data/pets";
 
 const Animais = () => {
-  const initialPets = 6;
+  const initialPets = 3;
   const [visiblePets, setVisiblePets] = useState(initialPets);
 
   const loadMorePets = () => {

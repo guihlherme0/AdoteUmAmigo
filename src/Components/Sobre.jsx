@@ -38,7 +38,8 @@ const Sobre = () => {
           </div>
 
           <div className="flex-1 flex justify-center">
-            <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 overflow-hidden border-8 border-white shadow-lg rounded-2xl">
+            <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96
+        lg:w-[600px] lg:h-[500px] overflow-hidden border-8 border-white shadow-lg lg:shadow-lg rounded-[60%_40%_30%_60%/60%_30%_70%_30%]">
               <img src={cachorro3} alt="Sobre Nós" className="w-full h-full object-cover" />
             </div>
           </div>
