@@ -1,6 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import MensagemModal from "./MensagemModal";
 
 const Contato = () => {
+
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleAdopt = (e) => {
+    e.preventDefault(); 
+    setModalOpen(true);
+  };
+
   return (
     <section id="Contato" className="py-16 px-6 bg-gray-200 text-center">
       <h3 className="text-3xl sm:text-4xl font-bold text-purple-600 mb-12">
@@ -46,14 +55,17 @@ const Contato = () => {
               placeholder="Digite sua mensagem aqui..."
             ></textarea>
           </div>
+
           <button
-            type="submit"
+            onClick={handleAdopt}
             className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-purple-700 transition-all duration-300 cursor-pointer"
           >
             Enviar Mensagem
           </button>
         </form>
       </div>
+
+      <MensagemModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 };

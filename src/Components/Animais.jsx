@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import pets from "../Data/pets";
+import { Link } from "react-router-dom";
+
 
 const Animais = () => {
   const initialPets = 3;
@@ -23,10 +25,12 @@ const Animais = () => {
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
         {displayedPets.map((pet, i) => (
-          <div
+          <Link
+            to="/catalogo"
             key={i}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 flex flex-col text-center w-full max-w-sm h-full"
+            className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 flex flex-col text-center w-full max-w-sm h-full cursor-pointer"
           >
+
             <img
               src={pet.img}
               alt={pet.name}
@@ -40,14 +44,8 @@ const Animais = () => {
                 <p className="mt-2 text-gray-600 text-center">{pet.desc}</p>
               </div>
 
-              <button
-                className="mt-6 bg-purple-600 text-white font-semibold px-6 py-2 rounded-full shadow-md
-                hover:bg-purple-700 hover:scale-105 transition-all duration-300 cursor-pointer"
-              >
-                Quero Adotar
-              </button>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

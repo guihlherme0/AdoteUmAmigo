@@ -44,12 +44,6 @@ const Sobre = () => {
             </div>
           </div>
         </div>
-
-        <div className="text-center mt-12">
-          <button className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:bg-purple-700 transition-all duration-300 cursor-pointer">
-            Saiba Mais Sobre Nós
-          </button>
-        </div>
       </div>
     </section>
   );
