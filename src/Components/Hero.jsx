@@ -1,7 +1,8 @@
 import { Circle, Heart, HomeIcon } from "lucide-react";
 import React from "react";
 import hero from '../assets/hero.png'
-
+import { Link } from "react-router-dom";
+import React, { useState } from 'react';
 
 function Hero() {
   return (
@@ -60,10 +61,11 @@ function Hero() {
           sm:text-base sm:px-8 sm:py-4 rounded-xl shadow-xl hover:bg-purple-700 transition-all duration-300 cursor-pointer">
             Divulgar pet
           </button>
-          <button className="bg-white text-purple-700 font-semibold text-sm px-6 py-4 w-fit mx-auto sm:w-auto sm:mx-0 sm:text-base sm:px-6 sm:py-4
+          <Link to="/catalogo"
+          className="bg-white text-purple-700 font-semibold text-sm px-6 py-4 w-fit mx-auto sm:w-auto sm:mx-0 sm:text-base sm:px-6 sm:py-4
           rounded-xl border-2 border-purple-600 shadow-sm hover:bg-purple-100 transition-all duration-300 cursor-pointer">
             Adotar um Pet
-          </button>
+          </Link>
 
         </div>
       </div>

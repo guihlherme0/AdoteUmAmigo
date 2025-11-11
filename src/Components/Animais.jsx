@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import pets from "../Data/pets";
 import { Link } from "react-router-dom";
 
-
 const Animais = () => {
   const initialPets = 3;
   const [visiblePets, setVisiblePets] = useState(initialPets);
@@ -24,13 +23,13 @@ const Animais = () => {
       </h3>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
+        
         {displayedPets.map((pet, i) => (
           <Link
             to="/catalogo"
             key={i}
-            className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 flex flex-col text-center w-full max-w-sm h-full cursor-pointer"
+            className="bg-white rounded-2xl shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 flex flex-col text-center w-full max-w-sm cursor-pointer"
           >
-
             <img
               src={pet.img}
               alt={pet.name}
@@ -38,17 +37,25 @@ const Animais = () => {
             />
 
             <div className="p-6 flex flex-col items-center justify-between flex-grow">
-              <div>
+              
+              <div className="text-center">
                 <h4 className="text-xl font-bold text-gray-800 mb-1">{pet.name}</h4>
                 <p className="text-gray-500">{pet.age}</p>
-                <p className="mt-2 text-gray-600 text-center">{pet.desc}</p>
+                <p className="mt-2 text-gray-600">{pet.desc}</p>
               </div>
 
+              <button
+                className="mt-4 bg-purple-600 text-white font-semibold px-6 py-2 rounded-xl shadow-lg hover:bg-purple-700 transition-all duration-300 cursor-pointer"
+              >
+                Quero Adotar
+              </button>
             </div>
+            
           </Link>
         ))}
-      </div>
 
+      </div> 
+ 
       <div className="flex justify-center gap-4 mt-12">
         {visiblePets < pets.length && (
           <button
@@ -67,6 +74,7 @@ const Animais = () => {
           </button>
         )}
       </div>
+
     </section>
   );
 };
