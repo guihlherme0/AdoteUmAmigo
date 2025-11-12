@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import pets from "../Data/pets";
+import AdocaoModal from "../Components/AdocaoModal";
+
 
 
 export default function Catalogo() {
   const [showFilters, setShowFilters] = useState(false);
-
-
   const [search, setSearch] = useState("");
-
   const [speciesFilter, setSpeciesFilter] = useState("Todos");
   const [sexFilter, setSexFilter] = useState("Todos");
-
   const [modalOpen, setModalOpen] = useState(false);
+
+  const handleAdopt = () => setModalOpen(true);
+
 
   const filteredPets = pets.filter((pet) =>
     pet.name.toLowerCase().includes(search.toLowerCase())
@@ -26,7 +27,7 @@ export default function Catalogo() {
     <section className="pt-32 px-4 sm:px-6 max-w-7xl mx-auto mb-20">
 
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-600">Pets Para Adoção</h2>
+        <h2 className="text-2xl font-bold text-gray-800">Pets Para Adoção</h2>
 
         <button
           onClick={() => setShowFilters(!showFilters)}
@@ -80,7 +81,7 @@ export default function Catalogo() {
         </aside>
 
         {/* Grid de Pets */}
-        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 cursor-pointer">
           {filteredPets.map((pet, i) => (
             <div key={i} className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
 
@@ -91,7 +92,8 @@ export default function Catalogo() {
               <img 
               src={pet.img} 
               alt={pet.name} 
-              className="w-full h-64 object-cover" 
+              className="w-full h-64 object-cover"
+              onClick={handleAdopt} 
               />
 
               <div className="p-4 flex flex-col flex-grow">
@@ -123,6 +125,8 @@ export default function Catalogo() {
         </div>
 
       </div>
+      {/* Modal de adoção */}
+      <AdocaoModal open={modalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
 
