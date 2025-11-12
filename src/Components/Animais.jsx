@@ -17,13 +17,13 @@ const Animais = () => {
   const displayedPets = pets.slice(0, visiblePets);
 
   return (
-    <section id="Animais" className="py-16 px-6 bg-gray-200 text-center">
+    <section id="Animais" className="py-16 px-6 bg-purple-200 text-center">
       <h3 className="text-3xl sm:text-4xl font-bold text-purple-600 mb-12">
         Animais Disponíveis
       </h3>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto justify-items-center">
-        
+
         {displayedPets.map((pet, i) => (
           <Link
             to="/catalogo"
@@ -37,7 +37,7 @@ const Animais = () => {
             />
 
             <div className="p-6 flex flex-col items-center justify-between flex-grow">
-              
+
               <div className="text-center">
                 <h4 className="text-xl font-bold text-gray-800 mb-1">{pet.name}</h4>
                 <p className="text-gray-500">{pet.age}</p>
@@ -50,12 +50,12 @@ const Animais = () => {
                 Quero Adotar
               </button>
             </div>
-            
+
           </Link>
         ))}
 
-      </div> 
- 
+      </div>
+
       <div className="flex justify-center gap-4 mt-12">
         {visiblePets < pets.length && (
           <button

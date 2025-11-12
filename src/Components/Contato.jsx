@@ -11,7 +11,7 @@ const Contato = () => {
   };
 
   return (
-    <section id="Contato" className="py-16 px-6 bg-gray-200 text-center">
+    <section id="Contato" className="py-16 px-6 bg-purple-200 text-center">
       <h3 className="text-3xl sm:text-4xl font-bold text-purple-600 mb-12">
         Entre em Contato
       </h3>
