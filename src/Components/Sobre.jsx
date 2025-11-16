@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Heart, Users, PawPrint } from "lucide-react";
 import cachorro3 from "../assets/cachorro3.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Sobre = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200, once: true });
+  }, []);
+
   return (
     <section id="Sobre" className="relative bg-purple-50 py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-16">
-        
+
         {/* Texto e Cards */}
-        <div className="flex-1 space-y-8 relative z-20">
+        <div
+          className="flex-1 space-y-8 relative z-20"
+          data-aos="fade-right"
+        >
           <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center lg:text-left">
-            Sobre{" "}
-            <span className="text-purple-600">Nós</span>
+            Sobre <span className="text-purple-600">Nós</span>
           </h3>
 
           <p className="text-gray-700 text-lg leading-relaxed text-center lg:text-left max-w-lg">
@@ -25,7 +33,11 @@ const Sobre = () => {
           <div className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start mt-10">
             
             {/* Card Missão */}
-            <div className="bg-white w-72 rounded-3xl p-6 border border-gray-100 shadow-xl hover:shadow-2xl transition">
+            <div
+              className="bg-white w-72 rounded-3xl p-6 border border-gray-100 shadow-xl hover:shadow-2xl transition"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-pink-100 mb-4">
                 <Heart className="text-pink-600 w-6 h-6" />
               </div>
@@ -36,7 +48,11 @@ const Sobre = () => {
             </div>
 
             {/* Card Comunidade */}
-            <div className="bg-purple-100 w-72 rounded-3xl p-6 border border-gray-100 shadow-2xl hover:shadow-xl transition">
+            <div
+              className="bg-purple-100 w-72 rounded-3xl p-6 border border-gray-100 shadow-2xl hover:shadow-xl transition"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-200 mb-4">
                 <Users className="text-purple-700 w-6 h-6" />
               </div>
@@ -45,11 +61,15 @@ const Sobre = () => {
                 Somos uma rede de voluntários, protetores e adotantes unidos por um propósito: espalhar amor e empatia.
               </p>
             </div>
+
           </div>
         </div>
 
         {/* Imagem decorativa */}
-        <div className="flex-1 flex justify-center lg:justify-end relative lg:-ml-16">
+        <div
+          className="flex-1 flex justify-center lg:justify-end relative lg:-ml-16"
+          data-aos="fade-left"
+        >
           <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[600px] lg:h-[500px] 
           overflow-hidden border-8 border-white shadow-lg rounded-[60%_40%_30%_60%/60%_30%_70%_30%] relative z-10">
             <img
@@ -59,9 +79,9 @@ const Sobre = () => {
             />
           </div>
 
-          {/* Pata decorativa */}
           <PawPrint className="absolute text-purple-200 w-32 h-32 bottom-[-30px] right-[-40px] rotate-12 hidden lg:block" />
         </div>
+
       </div>
     </section>
   );

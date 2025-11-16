@@ -10,19 +10,38 @@ function Hero() {
     <section id="Home" className="relative bg-purple-50 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between">
 
-        <div className="flex-1 w-full max-w-xl space-y-6 relative z-20">
-          <h2 className="text-4xl sm:text-5xl text-gray-900 text-center lg:text-left">
+        <div 
+          data-aos="fade-right"
+          data-aos-duration="700"
+          className="flex-1 w-full max-w-xl space-y-6 relative z-20"
+        >
+          <h2 
+            data-aos="fade-right"
+            data-aos-delay="150"
+            data-aos-duration="700"
+            className="text-4xl sm:text-5xl text-gray-900 text-center lg:text-left"
+          >
             Não compre,{" "}
             <span className="font-bold text-black block lg:inline">Adote!</span>
           </h2>
 
-          <div className="flex gap-3 mt-4 justify-center lg:justify-start">
+          <div 
+            data-aos="fade-right"
+            data-aos-delay="250"
+            data-aos-duration="700"
+            className="flex gap-3 mt-4 justify-center lg:justify-start"
+          >
             <Circle className="text-purple-500 w-5 h-5" />
             <Circle className="text-purple-500 w-5 h-5" />
             <Circle className="text-purple-500 w-5 h-5" />
           </div>
 
-          <div className="flex gap-4 justify-center lg:justify-start mt-6">
+          <div 
+            data-aos="fade-up"
+            data-aos-delay="350"
+            data-aos-duration="700"
+            className="flex gap-4 justify-center lg:justify-start mt-6"
+          >
             <button className="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
               Divulgar Pet
             </button>
@@ -35,10 +54,16 @@ function Hero() {
             </Link>
           </div>
 
+          {/* CARDS */}
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-48 items-center lg:items-start mt-10">
 
             {/* Card 1 */}
-            <div className="bg-white w-72 rounded-3xl p-6 border border-gray-100 shadow-xl">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="400"
+              data-aos-duration="700"
+              className="bg-white w-72 rounded-3xl p-6 border border-gray-100 shadow-xl"
+            >
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-pink-100 mb-4">
                 <HomeIcon className="text-pink-600 w-6 h-6" />
               </div>
@@ -53,7 +78,12 @@ function Hero() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-purple-100 w-72 rounded-3xl p-6 border border-gray-100 shadow-xl">
+            <div
+              data-aos="fade-up"
+              data-aos-delay="500"
+              data-aos-duration="700"
+              className="bg-purple-100 w-72 rounded-3xl p-6 border border-gray-100 shadow-xl"
+            >
               <h4 className="text-purple-700 font-semibold text-md mb-2">
                 Pets Adotados
               </h4>
@@ -79,7 +109,12 @@ function Hero() {
           </div>
         </div>
 
-        <div className="flex-1 mt-12 lg:mt-0 lg:ml-12 flex justify-center">
+        <div 
+          data-aos="zoom-in"
+          data-aos-delay="800"
+          data-aos-duration=""
+          className="flex-1 mt-12 lg:mt-0 lg:ml-12 flex justify-center"
+        >
           <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[600px] lg:h-[500px] overflow-hidden border-8 border-white shadow-lg rounded-[60%_40%_30%_60%/60%_30%_70%_30%] relative z-10">
             <img src={hero} alt="hero" className="object-cover w-full h-full" />
           </div>
