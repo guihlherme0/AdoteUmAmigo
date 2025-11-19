@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { Circle, Heart, HomeIcon } from "lucide-react";
 import hero from "../assets/hero.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; 
 
 function Hero() {
-  const [adocoesHoje, setAdocoesHoje] = useState(0);
+  const adocoesHoje = 12;
+  
+  const navigate = useNavigate();
 
   return (
     <section id="Home" className="relative bg-purple-50 py-12">
@@ -42,22 +44,22 @@ function Hero() {
             data-aos-duration="700"
             className="flex gap-4 justify-center lg:justify-start mt-6"
           >
-            <button className="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition">
+            <button 
+              onClick={() => navigate("/criar-anuncio")}
+              className="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:-translate-y-1"
+            >
               Divulgar Pet
             </button>
 
             <Link
               to="/Catalogo"
-              className="bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition"
+              className="bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:-translate-y-1"
             >
               Adotar Pet
             </Link>
           </div>
 
-          {/* CARDS */}
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-48 items-center lg:items-start mt-10">
-
-            {/* Card 1 */}
             <div
               data-aos="fade-up"
               data-aos-delay="400"
@@ -77,7 +79,6 @@ function Hero() {
               </p>
             </div>
 
-            {/* Card 2 */}
             <div
               data-aos="fade-up"
               data-aos-delay="500"

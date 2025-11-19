@@ -6,6 +6,7 @@ import Animais from './Components/Animais'
 import Contato from './Components/Contato'
 import Footer from './Components/Footer'
 import Catalogo from './pages/Catalogo'
+import CriarAnuncio from './pages/CriarAnuncio'; 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AOS from "aos";
@@ -39,6 +40,9 @@ function App() {
             } />
 
             <Route path="/catalogo" element={<Catalogo />} />
+
+            <Route path="/criar-anuncio" element={<CriarAnuncio />} />
+            
           </Routes>
         </main>
 
