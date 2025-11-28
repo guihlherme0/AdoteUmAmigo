@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import Button from "../componentsLoginRegister/Button";
 import Input from "../componentsLoginRegister/Input";
@@ -26,9 +26,7 @@ export default function LoginPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Login:", { email, password, rememberMe });
 
-    // Pega o usuário salvo (simulação)
     const savedUser = JSON.parse(localStorage.getItem("user"));
 
     if (!savedUser) {
@@ -37,7 +35,6 @@ export default function LoginPage() {
     }
 
     if (savedUser.email === email && savedUser.password === password) {
-      // Salva o usuário logado
       if (rememberMe) {
         localStorage.setItem("loggedInUser", JSON.stringify(savedUser));
       } else {
@@ -45,7 +42,7 @@ export default function LoginPage() {
       }
 
       alert("Login realizado com sucesso!");
-      navigate("/"); // Redireciona para a tela inicial
+      navigate("/");
     } else {
       alert("Email ou senha incorretos!");
     }
@@ -141,9 +138,9 @@ export default function LoginPage() {
 
             <CardFooter className="text-center text-sm text-gray-600 mt-2">
               Não tem conta?{" "}
-              <a href="/register" className="text-purple-600 hover:underline">
+              <Link to="/register" className="text-purple-600 hover:underline">
                 Cadastre-se gratuitamente
-              </a>
+              </Link>
             </CardFooter>
 
           </Card>
