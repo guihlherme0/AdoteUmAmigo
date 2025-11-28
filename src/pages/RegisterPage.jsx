@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Button from "../componentsLoginRegister/Button";
 import Input from "../componentsLoginRegister/Input";
@@ -19,6 +20,8 @@ export default function RegisterPage() {
     confirm: "",
   });
 
+  const navigate = useNavigate();
+
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -31,7 +34,6 @@ export default function RegisterPage() {
       return;
     }
 
-    // Salvando usuário no localStorage
     localStorage.setItem(
       "user",
       JSON.stringify({
@@ -42,7 +44,7 @@ export default function RegisterPage() {
     );
 
     alert("Cadastro realizado com sucesso!");
-    window.location.href = "/login";
+    navigate("/login");
   };
 
   return (
