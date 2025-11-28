@@ -1,14 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Heart, Users, PawPrint } from "lucide-react";
 import cachorro3 from "../assets/cachorro3.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const Sobre = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1200, once: true });
-  }, []);
-
   return (
     <section id="Sobre" className="relative bg-purple-50 py-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between gap-16">
@@ -30,15 +24,15 @@ const Sobre = () => {
           </p>
 
           {/* Cards */}
-          <div className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start mt-10">
+          <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-48 items-center lg:items-start mt-10">
             
             {/* Card Missão */}
             <div
-              className="bg-white w-72 rounded-3xl p-6 border border-gray-100 shadow-xl hover:shadow-2xl transition"
+              className="bg-white w-72 min-h-[230px] rounded-3xl p-6 border border-gray-100 shadow-xl"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-pink-100 mb-4">
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-pink-100 mb-4">
                 <Heart className="text-pink-600 w-6 h-6" />
               </div>
               <h4 className="text-lg font-semibold text-gray-800 mb-2">Nossa Missão</h4>
@@ -49,15 +43,15 @@ const Sobre = () => {
 
             {/* Card Comunidade */}
             <div
-              className="bg-purple-100 w-72 rounded-3xl p-6 border border-gray-100 shadow-2xl hover:shadow-xl transition"
+              className="bg-white w-72 min-h-[230px] rounded-3xl p-6 border border-gray-100 shadow-xl"
               data-aos="fade-up"
               data-aos-delay="400"
             >
-              <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-purple-200 mb-4">
+              <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-purple-100 mb-4">
                 <Users className="text-purple-700 w-6 h-6" />
               </div>
-              <h4 className="text-lg font-semibold text-purple-800 mb-2">Nossa Comunidade</h4>
-              <p className="text-purple-700 text-sm">
+              <h4 className="text-lg font-semibold text-gray-800 mb-2">Nossa Comunidade</h4>
+              <p className="text-gray-600 text-sm">
                 Somos uma rede de voluntários, protetores e adotantes unidos por um propósito: espalhar amor e empatia.
               </p>
             </div>

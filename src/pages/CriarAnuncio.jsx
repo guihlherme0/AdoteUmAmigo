@@ -26,7 +26,7 @@ export default function CriarAnuncio() {
             </h2>
             
             <p className="text-slate-500 mb-8 text-base font-medium leading-relaxed">
-              No momento esta tela não está disponível.
+              No momento este serviço não está disponível.
             </p>
             
             <button 

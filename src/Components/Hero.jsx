@@ -6,21 +6,16 @@ import { Link, useNavigate } from "react-router-dom";
 function Hero() {
   const adocoesHoje = 12;
   
-  const navigate = useNavigate();
-
   return (
-    <section id="Home" className="relative bg-purple-50 py-12">
+    <section id="Home" className="relative bg-purple-50 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20 flex flex-col lg:flex-row items-center justify-between">
 
         <div 
           data-aos="fade-right"
-          data-aos-duration="700"
           className="flex-1 w-full max-w-xl space-y-6 relative z-20"
         >
           <h2 
             data-aos="fade-right"
-            data-aos-delay="150"
-            data-aos-duration="700"
             className="text-4xl sm:text-5xl text-gray-900 text-center lg:text-left"
           >
             Não compre,{" "}
@@ -29,13 +24,12 @@ function Hero() {
 
           <div 
             data-aos="fade-right"
-            data-aos-delay="250"
-            data-aos-duration="700"
             className="flex gap-3 mt-4 justify-center lg:justify-start"
           >
             <Circle className="text-purple-500 w-5 h-5" />
             <Circle className="text-purple-500 w-5 h-5" />
             <Circle className="text-purple-500 w-5 h-5" />
+            
           </div>
 
           <div 
@@ -44,12 +38,13 @@ function Hero() {
             data-aos-duration="700"
             className="flex gap-4 justify-center lg:justify-start mt-6"
           >
-            <button 
-              onClick={() => navigate("/criar-anuncio")}
-              className="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full shadow-md transition transform hover:-translate-y-1"
+            <Link 
+              to="/criar-anuncio"
+              className="bg-pink-500 hover:bg-pink-600 text-white font-semibold px-6 py-3 rounded-full shadow-md
+               transition transform hover:-translate-y-1"
             >
               Divulgar Pet
-            </button>
+            </Link>
 
             <Link
               to="/Catalogo"
@@ -112,8 +107,8 @@ function Hero() {
 
         <div 
           data-aos="zoom-in"
-          data-aos-delay="800"
-          data-aos-duration=""
+          data-aos-delay="700"
+          data-aos-duration = "500"
           className="flex-1 mt-12 lg:mt-0 lg:ml-12 flex justify-center"
         >
           <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[600px] lg:h-[500px] overflow-hidden border-8 border-white shadow-lg rounded-[60%_40%_30%_60%/60%_30%_70%_30%] relative z-10">

@@ -24,11 +24,11 @@ export default function Catalogo() {
 
   return (
     <section className="pt-32 px-4 sm:px-6 max-w-7xl mx-auto mb-20">
-
       {/* Título + Botão */}
       <div className="flex items-center justify-between mb-6">
         <h2
           data-aos="fade-right"
+          data-aos-duration="500"
           className="text-2xl font-bold text-gray-800"
         >
           Pets Para Adoção
@@ -36,6 +36,7 @@ export default function Catalogo() {
 
         <button
           data-aos="fade-left"
+          data-aos-duration="500"
           onClick={() => setShowFilters(!showFilters)}
           className="md:hidden px-4 py-2 bg-purple-600 text-white rounded-lg"
         >
@@ -44,10 +45,10 @@ export default function Catalogo() {
       </div>
 
       <div className="flex gap-8">
-
         <aside
           data-aos="fade-up"
-          data-aos-delay="100"
+          data-aos-delay="200"
+          data-aos-duration="500"
           className={`
             w-64 bg-white p-6 rounded-xl shadow-md h-fit
             ${showFilters ? "block" : "hidden"}
@@ -93,11 +94,14 @@ export default function Catalogo() {
             <div
               key={i}
               data-aos="fade-up"
-              data-aos-delay={i * 100}
+              data-aos-delay={i * 100} // Ajustando o delay para uma animação sequencial
+              data-aos-duration="500" // Duração mais rápida
               className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
             >
-
-              <div className="bg-purple-600 text-white text-center font-bold py-2 text-sm">
+              <div
+                onClick={handleAdopt}
+                className="bg-purple-600 text-white text-center font-bold py-2 text-sm"
+              >
                 Para Adoção
               </div>
 
@@ -109,11 +113,8 @@ export default function Catalogo() {
               />
 
               <div className="p-4 flex flex-col flex-grow">
-
                 <div className="flex justify-between items-center mb-2">
-                  <h4 className="text-2xl font-bold text-gray-800">
-                    {pet.name}
-                  </h4>
+                  <h4 className="text-2xl font-bold text-gray-800">{pet.name}</h4>
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -135,12 +136,10 @@ export default function Catalogo() {
                   <span>{pet.location}</span>
                   <span>{pet.timestamp}</span>
                 </div>
-
               </div>
             </div>
           ))}
         </div>
-
       </div>
 
       {/* Modal */}

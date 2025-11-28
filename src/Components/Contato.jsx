@@ -15,6 +15,7 @@ const Contato = () => {
       id="Contato" 
       className="py-16 px-6 bg-purple-200 text-center"
       data-aos="fade-up"
+      data-aos-duration = "200"
     >
       <h3 
         className="text-3xl sm:text-4xl font-bold text-purple-600 mb-12"
@@ -66,7 +67,7 @@ const Contato = () => {
 
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="400" className="mb-6">
+          <div data-aos="fade-up" data-aos-delay="500" className="mb-6">
             <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
               Mensagem
             </label>
@@ -82,7 +83,7 @@ const Contato = () => {
             onClick={handleAdopt}
             className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-purple-700 transition-all duration-300 cursor-pointer"
             data-aos="fade-up"
-            data-aos-delay="500"
+            
           >
             Enviar Mensagem
           </button>

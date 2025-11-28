@@ -6,7 +6,9 @@ import Animais from './Components/Animais'
 import Contato from './Components/Contato'
 import Footer from './Components/Footer'
 import Catalogo from './pages/Catalogo'
-import CriarAnuncio from './pages/CriarAnuncio'; 
+import CriarAnuncio from './pages/CriarAnuncio'
+import LoginPage from './pages/LoginPage'
+import RegisterPage from './pages/RegisterPage'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import AOS from "aos";
@@ -17,15 +19,15 @@ function App() {
 
   useEffect(() => {
     AOS.init({
-      duration: 800,  
+      duration: 1000,  
       once: false,     
-      easing: "ease-out",
+      easing: "ease-in-out",
     });
   }, []);
 
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen bg-gray-200">
+      <div className="flex flex-col min-h-screen bg-purple-200">
         <Navbar />
 
         <main className="flex-grow">
@@ -40,9 +42,9 @@ function App() {
             } />
 
             <Route path="/catalogo" element={<Catalogo />} />
-
             <Route path="/criar-anuncio" element={<CriarAnuncio />} />
-            
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </main>
 
