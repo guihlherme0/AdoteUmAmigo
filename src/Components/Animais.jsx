@@ -17,9 +17,9 @@ const Animais = () => {
       {/* Título */}
       <h3
         data-aos="fade-up"
-        className="text-3xl sm:text-4xl font-bold text-purple-600 mb-12"
+        className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12"
       >
-        Animais Disponíveis
+        Pets em Destaque
       </h3>
 
       {/* Grid corrigida */}
