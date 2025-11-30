@@ -81,7 +81,6 @@ export default function LoginPage() {
             <CardHeader className="space-y-1">
               <CardTitle className="text-center flex items-center justify-center gap-2">
                 Bem-vindo de volta!
-                <Heart className="w-5 h-5 fill-pink-500 text-pink-500" />
               </CardTitle>
 
               <CardDescription className="text-center">
