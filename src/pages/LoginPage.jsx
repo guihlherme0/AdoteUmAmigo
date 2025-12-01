@@ -15,7 +15,7 @@ import {
   CardFooter
 } from "../componentsLoginRegister/Card";
 
-import { PawPrint, Heart } from "lucide-react";
+import { PawPrint} from "lucide-react";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -84,7 +84,7 @@ export default function LoginPage() {
               </CardTitle>
 
               <CardDescription className="text-center">
-                Entre para encontrar seu novo melhor amigo
+                Entre para encontrar seu novo pet
               </CardDescription>
             </CardHeader>
 

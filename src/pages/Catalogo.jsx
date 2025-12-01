@@ -94,8 +94,7 @@ export default function Catalogo() {
             <div
               key={i}
               data-aos="fade-up"
-              data-aos-delay={i * 100} // Ajustando o delay para uma animação sequencial
-              data-aos-duration="500" // Duração mais rápida
+              data-aos-duration="700" 
               className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
             >
               <div
