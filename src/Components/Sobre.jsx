@@ -10,7 +10,9 @@ const Sobre = () => {
         {/* Texto e Cards */}
         <div
           className="flex-1 space-y-8 relative z-20"
-          data-aos="fade-right"
+          data-aos="zoom-in-up"
+          data-aos-delay="100"
+          data-aos-duration="500"
         >
           <h3 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center lg:text-left">
             Sobre <span className="text-purple-600">Nós</span>
@@ -29,8 +31,9 @@ const Sobre = () => {
             {/* Card Missão */}
             <div
               className="bg-white w-72 min-h-[230px] rounded-3xl p-6 border border-gray-100 shadow-xl"
-              data-aos="fade-up"
-              data-aos-delay="200"
+              data-aos="zoom-in-up"
+              data-aos-delay="100"
+              data-aos-duration="600"
             >
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-pink-100 mb-4">
                 <Heart className="text-pink-600 w-6 h-6" />
@@ -44,8 +47,9 @@ const Sobre = () => {
             {/* Card Comunidade */}
             <div
               className="bg-white w-72 min-h-[230px] rounded-3xl p-6 border border-gray-100 shadow-xl"
-              data-aos="fade-up"
-              data-aos-delay="200"
+              data-aos="zoom-in-up"
+              data-aos-delay="100"
+              data-aos-duration="600"
             >
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-purple-100 mb-4">
                 <Users className="text-purple-700 w-6 h-6" />
@@ -63,6 +67,7 @@ const Sobre = () => {
         <div
           className="flex-1 flex justify-center lg:justify-end relative lg:-ml-16"
           data-aos="fade-left"
+          data-aos-duration="1000"
         >
           <div className="w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[600px] lg:h-[500px] 
           overflow-hidden border-8 border-white shadow-lg rounded-[60%_40%_30%_60%/60%_30%_70%_30%] relative z-10">

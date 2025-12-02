@@ -38,7 +38,8 @@ export default function CriarAnuncio() {
           </div>
         </div>
       )}
-      <div className="flex flex-col lg:flex-row shadow-2xl max-w-7xl mx-auto mt-20 mb-10 bg-white rounded-3xl overflow-hidden lg:min-h-[650px]">
+      <div data-aos="zoom-in-up" data-aos-duration = "500"
+       className="flex flex-col lg:flex-row shadow-2xl max-w-7xl mx-auto mt-20 mb-10 bg-white rounded-3xl overflow-hidden lg:min-h-[650px]">
         <div className="w-full lg:w-2/5 bg-purple-600 flex flex-col justify-between relative">
           <div className="p-8 md:p-12 z-10">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-white leading-tight">

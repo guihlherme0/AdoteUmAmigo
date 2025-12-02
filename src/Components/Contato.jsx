@@ -15,20 +15,16 @@ const Contato = () => {
       id="Contato" 
       className="py-16 px-6 bg-purple-200 text-center"
       data-aos="zoom-in-up"
-      data-aos-duration="300"
+      data-aos-duration="500"
     >
       <h3 
         className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12"
-        data-aos="fade-down"
-        data-aos-delay="200"
       >
         Entre em Contato
       </h3>
 
       <div 
         className="max-w-4xl mx-auto"
-        data-aos="fade-up"
-        data-aos-delay="200"
       >
         <p className="text-gray-700 mb-8">
           Tem dúvidas sobre adoção ou quer divulgar um pet? Entre em contato conosco!
