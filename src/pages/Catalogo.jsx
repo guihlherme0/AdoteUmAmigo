@@ -92,7 +92,6 @@ export default function Catalogo() {
             <div
               key={i}
                data-aos="zoom-in-up"
-               data-aos-duration="500" 
               className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
             >
               <div
