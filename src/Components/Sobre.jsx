@@ -45,7 +45,7 @@ const Sobre = () => {
             <div
               className="bg-white w-72 min-h-[230px] rounded-3xl p-6 border border-gray-100 shadow-xl"
               data-aos="fade-up"
-              data-aos-delay="400"
+              data-aos-delay="200"
             >
               <div className="w-10 h-10 flex items-center justify-center rounded-lg bg-purple-100 mb-4">
                 <Users className="text-purple-700 w-6 h-6" />

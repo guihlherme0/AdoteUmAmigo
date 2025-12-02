@@ -14,8 +14,8 @@ const Contato = () => {
     <section 
       id="Contato" 
       className="py-16 px-6 bg-purple-200 text-center"
-      data-aos="fade-up"
-      data-aos-duration = "200"
+      data-aos="zoom-in-up"
+      data-aos-duration="300"
     >
       <h3 
         className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12"
@@ -28,7 +28,7 @@ const Contato = () => {
       <div 
         className="max-w-4xl mx-auto"
         data-aos="fade-up"
-        data-aos-delay="300"
+        data-aos-delay="200"
       >
         <p className="text-gray-700 mb-8">
           Tem dúvidas sobre adoção ou quer divulgar um pet? Entre em contato conosco!
@@ -36,12 +36,13 @@ const Contato = () => {
 
         <form 
           className="bg-white rounded-2xl shadow-lg p-8 max-w-2xl mx-auto"
-          data-aos="zoom-in"
-          data-aos-delay="400"
+           data-aos="zoom-in-up"
+           data-aos-delay="200"
+           data-aos-duration="400"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
 
-            <div data-aos="fade-right" data-aos-delay="400">
+            <div >
               <label htmlFor="name" className="block text-gray-700 font-semibold mb-2">
                 Nome
               </label>
@@ -53,7 +54,7 @@ const Contato = () => {
               />
             </div>
 
-            <div data-aos="fade-left" data-aos-delay="500">
+            <div>
               <label htmlFor="email" className="block text-gray-700 font-semibold mb-2">
                 Email
               </label>
@@ -67,7 +68,7 @@ const Contato = () => {
 
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="500" className="mb-6">
+          <div className="mb-6">
             <label htmlFor="message" className="block text-gray-700 font-semibold mb-2">
               Mensagem
             </label>
@@ -82,8 +83,6 @@ const Contato = () => {
           <button
             onClick={handleAdopt}
             className="bg-purple-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-purple-700 transition-all duration-300 cursor-pointer"
-            data-aos="fade-up"
-            
           >
             Enviar Mensagem
           </button>

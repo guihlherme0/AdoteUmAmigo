@@ -24,7 +24,6 @@ export default function Catalogo() {
 
   return (
     <section className="pt-32 px-4 sm:px-6 max-w-7xl mx-auto mb-20">
-      {/* Título + Botão */}
       <div className="flex items-center justify-between mb-6">
         <h2
           data-aos="fade-right"
@@ -44,15 +43,14 @@ export default function Catalogo() {
         </button>
       </div>
 
-      <div className="flex gap-8">
+      <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
         <aside
-          data-aos="fade-up"
-          data-aos-delay="200"
+          data-aos="zoom-in-up"
           data-aos-duration="500"
           className={`
-            w-64 bg-white p-6 rounded-xl shadow-md h-fit
+            w-full bg-white p-6 rounded-xl shadow-md h-fit
             ${showFilters ? "block" : "hidden"}
-            md:block
+            md:block md:w-64
           `}
         >
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Filtros</h3>
@@ -93,8 +91,8 @@ export default function Catalogo() {
           {filteredPets.map((pet, i) => (
             <div
               key={i}
-              data-aos="fade-up"
-              data-aos-duration="700" 
+               data-aos="zoom-in-up"
+               data-aos-duration="500" 
               className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col"
             >
               <div

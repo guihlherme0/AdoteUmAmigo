@@ -1,28 +1,41 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import pets from "../Data/pets";
 import { Link } from "react-router-dom";
 
 const Animais = () => {
   const initialPets = 3;
   const [visiblePets, setVisiblePets] = useState(initialPets);
+  const animaisRef = useRef(null); 
 
   const loadMorePets = () => setVisiblePets(prev => prev + 6);
-  const showLessPets = () => setVisiblePets(initialPets);
+
+  const showLessPets = () => {
+    setVisiblePets(initialPets);
+
+    
+    setTimeout(() => {
+      if (animaisRef.current) {
+        window.scrollTo({
+          top: animaisRef.current.offsetTop,  
+          behavior: "smooth"  
+        });
+      }
+    }, 100);  
+  };
 
   const displayedPets = pets.slice(0, visiblePets);
 
   return (
-    <section id="Animais" className="py-16 px-6 bg-purple-200 text-center">
+    <section ref={animaisRef} id="Animais" className="py-16 px-6 bg-purple-200 text-center">
       
-      {/* Título */}
       <h3
         data-aos="fade-up"
+        data-aos-duration="200"
         className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-12"
       >
         Pets em Destaque
       </h3>
 
-      {/* Grid corrigida */}
       <div
         className="
           grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
@@ -34,7 +47,7 @@ const Animais = () => {
           <div
             key={i}
             data-aos="zoom-in-up"
-            data-aos-delay={i * 100}
+            data-aos-duration="400"
             className="w-full flex"
           >
             <Link
@@ -79,6 +92,7 @@ const Animais = () => {
         {visiblePets < pets.length && (
           <button
             data-aos="fade-up"
+            data-aos-duration="500"
             className="
               bg-purple-600 text-white font-semibold px-6 py-3 rounded-xl 
               shadow-lg hover:bg-purple-700 transition-all
@@ -92,7 +106,7 @@ const Animais = () => {
         {visiblePets > initialPets && (
           <button
             data-aos="fade-up"
-            data-aos-delay="150"
+            data-aos-duration="500"
             className="
               bg-gray-600 text-white font-semibold px-6 py-3 rounded-xl 
               shadow-lg hover:bg-gray-700 transition-all
