@@ -28,7 +28,7 @@ export default function Catalogo() {
         <h2
           data-aos="fade-right"
           data-aos-duration="500"
-          className="text-2xl font-bold text-gray-800"
+          className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"
         >
           Pets Para Adoção
         </h2>

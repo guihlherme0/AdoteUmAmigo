@@ -1,7 +1,6 @@
-import React from "react";
 import { Circle, Heart, HomeIcon } from "lucide-react";
 import hero from "../assets/hero.png";
-import { Link, useNavigate } from "react-router-dom"; 
+import { Link} from "react-router-dom"; 
 
 function Hero() {
   const adocoesHoje = 12;
