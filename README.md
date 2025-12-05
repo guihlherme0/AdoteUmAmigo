@@ -5,7 +5,7 @@ Aplicação web simples para adoção de animais, onde usuários podem ver anima
 
 ## Funcionalidades
 - Listar animais disponíveis para adoção  
-- Permitir cadastro de novos animais (nome, idade, foto, características...)  
+- Permitir cadastro de novos animais por nome, foto, características(incompleto no momento)
 - Permitir busca / filtragem (por tipo, etc.)  
 - Página de detalhes do animal com informações completas  
 - Cadastro e Login
